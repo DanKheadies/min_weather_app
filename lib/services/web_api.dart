@@ -42,7 +42,6 @@ class OpenMeteoApi implements WebApi {
     final result = await get(url);
     final jsonString = result.body;
     final jsonMap = jsonDecode(jsonString);
-    print(jsonMap);
     final temperature = jsonMap['current']['temperature_2m'] as double;
     // final weather = jsonMap['weather'][0]['main'] as String;
     const weather = 'n_n';
